@@ -151,7 +151,6 @@ def read_all_users():
 #Create
 @app.post("/add_user")
 def add_user(user:str, friends:list):
-    #procedure_name = "2001_Verify_Postseperation_BW3_SC_AOCS_Modes"
     for friend in friends:
         if friend not in user_universe:
             raise HTTPException(status_code=400, detail=f"Friend {friend} does not exist")
